@@ -22,10 +22,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6775811275:AAEoE5BrrFIAdnhqs8B4LpMhDBBkKEhSOrk",
-             api_id= 20778821,
-             api_hash= "70ddbf0162bafe8b7e0007c3b22d01c0")
-
+             bot_token= "7424635247:AAFg9uIZv6hy6iFdQ99khfJosV3xSvDX4-Q ",
+             api_id=28477603,
+             api_hash= "2078f7f44d78c22d2cb337e8638697b4"
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
@@ -34,12 +33,12 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**STOPPED**🚦", True)
+    await m.reply_text("**STOPPED**🥰", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["vastavik"]))
+@bot.on_message(filters.command(["Manu""]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file for download')
     input: Message = await bot.listen(editable.chat.id)
@@ -170,11 +169,11 @@ async def account_login(bot: Client, m: Message):
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
                         count+=1
                         os.remove(ka)
-                        time.sleep(1)
-                    except FloodWait as e:
-                        await m.reply_text(str(e))
-                        time.sleep(e.x)
-                        continue
+                        
+      
+                     
+                        
+                        
                 
                 elif ".pdf" in url:
                     try:
@@ -196,7 +195,7 @@ async def account_login(bot: Client, m: Message):
                     await prog.delete(True)
                     await helper.send_vid(bot, m, cc, filename, thumb, name, prog)
                     count += 1
-                    time.sleep(1)
+                    
 
             except Exception as e:
                 await m.reply_text(
